@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Execução Fiscal de IPTU — Medeiros & Costa Advocacia</title>
+<meta name="description" content="Recebeu cobrança ou foi citado em execução fiscal de IPTU atrasado? Entenda seus direitos de defesa e negociação com um advogado tributarista no Rio de Janeiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F3EC;
+    --paper-2:#EFEADF;
+    --ink:#1C1C1A;
+    --ink-soft:#4A4A46;
+    --blue-deep:#1B3A5C;
+    --blue-dark:#0E2138;
+    --gold:#C9932E;
+    --gold-dark:#A9762016;
+    --red-stamp:#A13D2B;
+    --line:rgba(27,58,92,0.16);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    color:var(--blue-dark);
+  }
+  .mono{
+    font-family:'Roboto Mono', monospace;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  .sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
+  :focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+
+  /* ---------- TOPBAR ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:var(--blue-dark);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .brand{
+    color:#F6F3EC; font-family:'Fraunces', serif; font-weight:600;
+    font-size:1.05rem; letter-spacing:0.01em;
+  }
+  .brand span{color:var(--gold);}
+  .topbar-cta{
+    display:flex; align-items:center; gap:14px;
+  }
+  .tel-link{
+    color:#D9D4C6; font-size:0.85rem; text-decoration:none; display:none;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Public Sans', sans-serif; font-weight:700; font-size:0.85rem;
+    padding:11px 18px; border-radius:var(--radius);
+    text-decoration:none; border:1px solid transparent; cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-gold{background:var(--gold); color:var(--blue-dark);}
+  .btn-gold:hover{box-shadow:0 6px 18px rgba(201,147,46,0.35);}
+  .btn-outline{background:transparent; color:#F6F3EC; border-color:rgba(246,243,236,0.35);}
+  .btn-outline:hover{border-color:var(--gold); color:var(--gold);}
+  .btn-block{width:100%; justify-content:center; font-size:0.95rem; padding:15px 18px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(201,147,46,0.15), transparent 60%),
+      linear-gradient(180deg, var(--blue-dark) 0%, var(--blue-deep) 100%);
+    color:#F1EEE4;
+    padding:64px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  }
+  .eyebrow{
+    font-size:0.72rem; color:var(--gold); font-weight:600;
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--gold);}
+  .hero h1{
+    color:#FBF9F3; font-size:2.5rem; max-width:14ch;
+  }
+  .hero h1 em{
+    font-style:normal; color:var(--gold);
+  }
+  .hero p.lede{
+    margin-top:20px; font-size:1.05rem; color:#CBD2D9; max-width:46ch;
+  }
+  .hero-ctas{margin-top:32px; display:flex; flex-wrap:wrap; gap:12px;}
+  .hero-trust{
+    margin-top:28px; display:flex; gap:22px; flex-wrap:wrap;
+    font-size:0.78rem; color:#9FADB8;
+  }
+  .hero-trust li{list-style:none; display:flex; align-items:center; gap:7px;}
+  .hero-trust li::before{content:'✓'; color:var(--gold); font-weight:700;}
+
+  /* stamp / carimbo signature element */
+  .stamp-wrap{display:flex; justify-content:center; align-items:center;}
+  .stamp{
+    width:250px; height:250px; position:relative;
+    animation:stamp-in 900ms cubic-bezier(.2,.9,.25,1) 200ms both;
+  }
+  @keyframes stamp-in{
+    0%{opacity:0; transform:scale(1.35) rotate(-14deg);}
+    60%{opacity:1;}
+    100%{opacity:1; transform:scale(1) rotate(-8deg);}
+  }
+  .stamp svg{width:100%; height:100%;}
+  .stamp-ring-text{
+    font-family:'Roboto Mono', monospace; font-size:9.6px; letter-spacing:2.5px;
+    fill:var(--gold); text-transform:uppercase;
+  }
+  .stamp-center{
+    font-family:'Fraunces', serif; font-weight:700;
+  }
+  .stamp-circle{
+    fill:none; stroke:var(--gold); stroke-width:1.4;
+  }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    background:var(--paper-2); border-bottom:1px solid var(--line);
+    padding:16px 0;
+  }
+  .trust-strip .wrap{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:28px;
+    font-size:0.76rem; color:var(--ink-soft);
+  }
+  .trust-strip li{list-style:none;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:80px 0;}
+  .section-head{max-width:640px; margin:0 auto 44px;}
+  .section-head.center{text-align:center; margin-left:auto; margin-right:auto;}
+  .kicker{
+    font-size:0.72rem; color:var(--red-stamp); font-weight:600; margin-bottom:10px;
+    display:block;
+  }
+  .section-head h2{font-size:1.9rem;}
+  .section-head p{margin-top:14px; color:var(--ink-soft); font-size:1rem;}
+
+  /* checklist gatilhos */
+  .trigger-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:16px;
+  }
+  .trigger-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:20px 22px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .trigger-card .mark{
+    flex:0 0 auto; width:26px; height:26px; border-radius:50%;
+    background:var(--blue-deep); color:#fff; font-size:0.8rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .trigger-card p{font-size:0.92rem; color:var(--ink);}
+  .trigger-note{
+    margin-top:26px; padding:16px 20px; background:var(--paper-2);
+    border-left:3px solid var(--gold); font-size:0.88rem; color:var(--ink-soft);
+  }
+
+  /* two-col explainer */
+  .explainer{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;
+  }
+  .law-tag{
+    display:inline-block; font-family:'Roboto Mono', monospace; font-size:0.72rem;
+    color:var(--blue-deep); background:var(--paper-2); border:1px solid var(--line);
+    padding:5px 10px; border-radius:var(--radius); margin-bottom:16px;
+  }
+  .explainer h2{font-size:1.7rem; margin-bottom:14px;}
+  .explainer p{color:var(--ink-soft); margin-bottom:14px;}
+
+  /* vinculo secondary block */
+  .vinculo{
+    background:var(--blue-dark); color:#EDEAE0; border-radius:var(--radius);
+    padding:48px; display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center;
+  }
+  .vinculo h2{color:#fff; font-size:1.5rem; max-width:24ch;}
+  .vinculo p{color:#B9C2CA; margin-top:12px; max-width:46ch; font-size:0.95rem;}
+
+  /* processo */
+  .steps{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px; counter-reset:step;
+  }
+  .step{position:relative; padding-top:52px;}
+  .step .num{
+    font-family:'Fraunces', serif; font-weight:700; font-size:2.2rem;
+    color:var(--gold); position:absolute; top:0; left:0;
+  }
+  .step h3{font-size:1.05rem; margin-bottom:8px;}
+  .step p{color:var(--ink-soft); font-size:0.9rem;}
+
+  /* depoimentos placeholder */
+  .testi-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .testi-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px;
+  }
+  .testi-card p.quote{font-size:0.95rem; color:var(--ink); font-style:italic;}
+  .testi-card .who{margin-top:14px; font-size:0.8rem; color:var(--ink-soft);}
+  .testi-flag{
+    margin-top:20px; font-size:0.78rem; color:var(--red-stamp);
+    background:#FBEDE9; border:1px dashed var(--red-stamp); padding:12px 16px; border-radius:var(--radius);
+  }
+
+  /* faq */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    cursor:pointer; list-style:none; padding:20px 0; font-weight:600; color:var(--blue-dark);
+    display:flex; justify-content:space-between; align-items:center; font-size:1rem;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+'; font-family:'Fraunces',serif; font-size:1.4rem; color:var(--gold);}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{padding-bottom:20px; color:var(--ink-soft); font-size:0.92rem; max-width:70ch;}
+
+  /* final cta */
+  .final-cta{
+    background:linear-gradient(180deg, var(--blue-deep), var(--blue-dark));
+    color:#fff; text-align:center; padding:72px 0;
+  }
+  .final-cta h2{color:#fff; font-size:2rem; max-width:22ch; margin:0 auto;}
+  .final-cta p{color:#C6CDD4; margin:16px auto 30px; max-width:50ch;}
+  .final-cta .btn-gold{padding:16px 30px; font-size:0.95rem;}
+
+  /* footer */
+  footer{background:var(--paper-2); padding:44px 0 100px; font-size:0.85rem; color:var(--ink-soft);}
+  footer .wrap{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:32px;}
+  footer h4{font-family:'Public Sans',sans-serif; font-size:0.78rem; color:var(--blue-dark); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;}
+  footer li{list-style:none; margin-bottom:8px;}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--blue-deep);}
+  .legal-note{margin-top:28px; padding-top:20px; border-top:1px solid var(--line); font-size:0.72rem; color:#8B8B85;}
+
+  /* mobile sticky cta */
+  .mobile-sticky{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--blue-dark); padding:12px 16px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex; gap:10px;
+  }
+
+  @media (min-width:820px){ .tel-link{display:inline;} .mobile-sticky{display:none;} }
+
+  @media (max-width:819px){
+    .hero .wrap{grid-template-columns:1fr; gap:36px; text-align:left;}
+    .stamp-wrap{order:-1; justify-content:flex-start;}
+    .stamp{width:150px; height:150px;}
+    .hero h1{font-size:1.9rem;}
+    .trigger-grid, .testi-grid{grid-template-columns:1fr;}
+    .explainer{grid-template-columns:1fr;}
+    .vinculo{grid-template-columns:1fr; padding:32px;}
+    .steps{grid-template-columns:1fr; gap:36px;}
+    footer .wrap{grid-template-columns:1fr; gap:28px;}
+    section{padding:56px 0;}
+    body{padding-bottom:70px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Medeiros <span>&</span> Costa <span style="color:#F6F3EC; font-weight:400; font-size:0.75rem; opacity:0.7;">Advocacia</span></div>
+    <div class="topbar-cta">
+      <a class="tel-link" href="tel:+5524920068268">(24) 92006-8268</a>
+      <a class="btn btn-gold" href="https://wa.me/5524920068268?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20sobre%20minha%20d%C3%ADvida%20de%20IPTU." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow mono">Direito Tributário</span>
+      <h1>Recebeu cobrança de IPTU atrasado, ou foi citado numa execução fiscal? <em>Existem formas legais de contestar, reduzir ou negociar essa dívida.</em></h1>
+      <p class="lede">Prescrição, erro no valor cobrado, imóvel que já foi vendido ou cálculo indevido de juros são pontos que podem ser contestados antes de pagar. Avaliação gratuita e sigilosa com um advogado tributarista.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="https://wa.me/5524920068268?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20sobre%20minha%20d%C3%ADvida%20de%20IPTU." target="_blank" rel="noopener">Avaliar minha dívida agora →</a>
+        <a class="btn btn-outline" href="#o-que-e">Entender minhas opções</a>
+      </div>
+      <ul class="hero-trust">
+        <li>Atendimento sigiloso</li>
+        <li>Avaliação inicial sem custo</li>
+        <li>Atuação em todo o Rio de Janeiro</li>
+      </ul>
+    </div>
+    <div class="stamp-wrap" aria-hidden="true">
+      <div class="stamp">
+        <svg viewBox="0 0 200 200">
+          <circle class="stamp-circle" cx="100" cy="100" r="92"/>
+          <circle class="stamp-circle" cx="100" cy="100" r="80"/>
+          <path id="ringPath" d="M 100,100 m -86,0 a 86,86 0 1,1 172,0 a 86,86 0 1,1 -172,0" fill="none"/>
+          <text class="stamp-ring-text">
+            <textPath href="#ringPath" startOffset="0%">LEF · LEI 6.830/80 · MEDEIROS & COSTA · ADVOCACIA TRIBUTÁRIA ·</textPath>
+          </text>
+          <text x="100" y="94" text-anchor="middle" class="stamp-center" fill="#F1EEE4" font-size="20">EXECUÇÃO</text>
+          <text x="100" y="118" text-anchor="middle" class="stamp-center" fill="#F1EEE4" font-size="20">FISCAL</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust-strip">
+  <ul class="wrap">
+    <li>OAB/RJ</li>
+    <li>Atuação em Direito Tributário</li>
+    <li>Primeira conversa sem compromisso</li>
+    <li>Atendimento por WhatsApp, telefone ou presencial</li>
+  </ul>
+</div>
+
+<section id="gatilhos">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker mono">Essa é a sua situação?</span>
+      <h2>Sinais de que sua dívida de IPTU pode ser contestada</h2>
+      <p>Nem toda cobrança está correta, e nem toda dívida ainda pode ser cobrada. Alguns pontos abrem espaço real para defesa ou negociação.</p>
+    </div>
+    <div class="trigger-grid">
+      <div class="trigger-card"><span class="mark">1</span><p>Recebi carta de cobrança, mas nunca fui citado judicialmente</p></div>
+      <div class="trigger-card"><span class="mark">2</span><p>Fui citado numa execução fiscal e não sei qual prazo tenho</p></div>
+      <div class="trigger-card"><span class="mark">3</span><p>Acho que o valor cobrado está errado ou desatualizado</p></div>
+      <div class="trigger-card"><span class="mark">4</span><p>O IPTU é de um imóvel que já vendi ou que não é mais meu</p></div>
+      <div class="trigger-card"><span class="mark">5</span><p>Já se passaram mais de 5 anos desde o vencimento da dívida</p></div>
+      <div class="trigger-card"><span class="mark">6</span><p>Meu imóvel pode ter direito a isenção (único imóvel, idoso, baixa renda)</p></div>
+    </div>
+    <div class="trigger-note">Cada situação pede uma estratégia diferente — contestar, negociar ou verificar prescrição são caminhos possíveis, dependendo do seu caso e do estágio em que a cobrança está.</div>
+  </div>
+</section>
+
+<section id="o-que-e" style="background:var(--paper-2);">
+  <div class="wrap explainer">
+    <div>
+      <span class="law-tag">Lei 6.830/80 (LEF)</span>
+      <h2>O que é a execução fiscal e como se defender, em termos simples</h2>
+      <p>É o processo judicial que o Município usa para cobrar judicialmente o IPTU não pago. Depois da citação, o contribuinte tem prazo para pagar, parcelar ou apresentar defesa — por embargos à execução ou exceção de pré-executividade, dependendo do caso.</p>
+      <p>Em boa parte dos casos, a defesa consegue reduzir o valor cobrado, anular a cobrança por prescrição ou corrigir erros no cálculo — sem que isso signifique deixar de pagar o que é realmente devido.</p>
+    </div>
+    <div>
+      <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; margin-bottom:14px; color:var(--blue-dark);">O que normalmente é analisado num caso assim</h3>
+      <ul style="padding-left:18px; color:var(--ink-soft); display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
+        <li>Data de vencimento do IPTU e prazo de prescrição (5 anos)</li>
+        <li>Titularidade do imóvel na época do fato gerador</li>
+        <li>Cálculo de juros, multa e correção monetária</li>
+        <li>Possível direito a isenção ou imunidade</li>
+        <li>Validade da citação e da Certidão de Dívida Ativa (CDA)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="vinculo">
+  <div class="wrap">
+    <div class="vinculo">
+      <div>
+        <span class="eyebrow mono" style="color:var(--gold);">Também ajudamos com isso</span>
+        <h2>Prefere negociar em vez de discutir a dívida na Justiça?</h2>
+        <p>Se a dívida é legítima e você só precisa de um prazo melhor, também ajudamos a negociar parcelamento direto com a Prefeitura, muitas vezes com desconto de juros e multa em programas de regularização fiscal.</p>
+      </div>
+      <a class="btn btn-gold" href="https://wa.me/5524920068268?text=Ol%C3%A1%2C%20quero%20entender%20sobre%20parcelamento%20de%20IPTU." target="_blank" rel="noopener">Falar sobre parcelamento</a>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker mono">Como funciona</span>
+      <h2>Do primeiro contato à ação judicial</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Avaliação gratuita</h3>
+        <p>Analisamos a cobrança ou o processo (se você já foi citado) para identificar os pontos de defesa ou negociação.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Estratégia de defesa ou negociação</h3>
+        <p>Definimos junto com você o melhor caminho: embargos, exceção de pré-executividade ou negociação administrativa com a Prefeitura.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Acompanhamento até a solução</h3>
+        <p>Conduzimos o processo ou a negociação com atualizações claras a cada etapa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--paper-2);">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head center">
+      <span class="kicker mono">Dúvidas frequentes</span>
+      <h2>Perguntas que sempre aparecem</h2>
+    </div>
+    <details class="faq-item" open>
+      <summary>Fui citado numa execução fiscal, quanto tempo tenho para me defender?</summary>
+      <p>O prazo costuma contar a partir da garantia do juízo ou penhora, mas pode variar conforme o andamento do processo. O ideal é procurar orientação assim que a citação chegar, para não perder o prazo de defesa.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Ainda não fui citado, só recebi uma carta de cobrança. Já posso fazer alguma coisa?</summary>
+      <p>Sim. É possível verificar prescrição, valor cobrado e titularidade do imóvel antes mesmo de uma ação ser ajuizada, e muitas vezes negociar diretamente com a Prefeitura nessa fase.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Quanto custa a avaliação inicial?</summary>
+      <p>A primeira conversa para entender sua situação não tem custo. Os honorários, quando há ação, são explicados com transparência antes de qualquer decisão.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Posso perder meu imóvel por causa dessa dívida?</summary>
+      <p>Em casos extremos, sim — mas isso costuma vir depois de várias etapas do processo. Quanto antes agir, mais opções existem para evitar esse cenário.</p>
+    </details>
+  </div>
+</section>
+
+<div class="final-cta">
+  <div class="wrap">
+    <h2>Antes de pagar ou ignorar a cobrança, entenda suas opções</h2>
+    <p>Uma avaliação gratuita pode identificar erros na cobrança ou o melhor caminho para negociar.</p>
+    <a class="btn btn-gold" href="https://wa.me/5524920068268?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20sobre%20minha%20d%C3%ADvida%20de%20IPTU." target="_blank" rel="noopener">Falar com um advogado agora →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Medeiros & Costa Advocacia</h4>
+      <p>Escritório de advocacia atuando no Rio de Janeiro, com foco em Direito Tributário, Trabalhista, Bancário, Família e demais áreas cíveis.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="tel:+5524920068268">(24) 92006-8268</a></li>
+        <li><a href="https://wa.me/5524920068268" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:medeiroscostaadv@gmail.com">medeiroscostaadv@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Áreas relacionadas</h4>
+      <ul>
+        <li><a href="#vinculo">Negociação e parcelamento de IPTU</a></li>
+        <li><a href="#o-que-e">Defesa em execução fiscal</a></li>
+        <li><a href="/">Ver todas as áreas de atuação</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal-note">
+    Este conteúdo tem caráter informativo e não constitui aconselhamento jurídico definitivo. Cada caso deve ser avaliado individualmente por um advogado. Anúncio em conformidade com o Código de Ética e Disciplina da OAB. © 2026 Medeiros & Costa Advocacia. OAB/RJ 216.493.
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <a class="btn btn-gold btn-block" href="https://wa.me/5524920068268?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20sobre%20minha%20d%C3%ADvida%20de%20IPTU." target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+</div>
+
+</body>
+</html>
